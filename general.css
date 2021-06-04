@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;600;700&family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600;700&family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(-45deg, #914731, #7e2145, #104b61, #146e59);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px auto;
+  padding: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.title-container {
+  text-align: center;
+}
+
+.container h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: #ededed;
+  margin: 10px 0px 40px 0px;
+}
+
+.card-header h1 {
+  color: grey;
+  font-size: 20px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  color: #ededed;
+  margin: 10px 0px;
+  letter-spacing: 1px;
+}
+
+.news-card {
+  border-radius: 8px;
+  background: #ededed;
+  width: auto;
+  margin-bottom: 3rem;
+  min-width: 20rem;
+  max-width: 20rem;
+  height: 450px;
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+.news-container {
+  margin: 5rem auto;
+  display: flex;
+  flex-flow: wrap;
+  align-content: center;
+  justify-content: space-around;
+  width: 70rem;
+}
+
+.news-card .card-image {
+  background-color: #727991;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.news-card .card-image .img-news,
+.news-card .card-image {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.news-card .card-image .img-news {
+  min-width: 100%;
+  max-height: 100%;
+}
+
+.card-body {
+  width: auto;
+  height: 53%;
+  padding: 15px;
+  overflow-wrap: break-word;
+  position: relative;
+}
+
+.card-body .card-title {
+  margin: 5px 0 20px 0;
+}
+
+.card-body .card-title h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #242424;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.card-body .card-title h1:hover {
+  color: rgb(4, 4, 155);
+}
+
+.card-body .card-title a {
+  text-decoration: none;
+}
+
+.card-body .body-country {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(173, 0, 0);
+}
+
+.card-body .body-description h5 {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.card-body .body-description {
+  margin: 0 5px 10px 0;
+}
+
+.card-body .body-date h5 {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(99, 99, 99);
+}
+
+.card-body .body-date {
+  position: absolute;
+  bottom: 5px;
+}
+
+@media (max-width: 1180px) {
+  .news-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .news-card {
+    min-width: 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .news-card {
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .news-card .card-image .img-news,
+  .news-card .card-image,
+  .news-card {
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  .container {
+    padding: 10px 15px;
+  }
+}
