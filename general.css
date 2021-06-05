@@ -198,12 +198,6 @@ p {
     margin-bottom: 0.8rem;
   }
 
-  .news-card .card-image .img-news,
-  .news-card .card-image,
-  .news-card {
-    border-radius: 0px 0px 0px 0px;
-  }
-
   .container {
     padding: 10px 15px;
   }
